@@ -1,85 +1,56 @@
 /*
 	Aaron Elliott
 	WPF 1409 Section 02
-	Expression Worksheet
+	Expression Personal
 	9-8-2014
 */
 
-//Dog Years task
-var ageInHumanYears = 3; // set human years = 3
-
-var calDogYears = ageInHumanYears * 7; // multiply human years to get dog years
-var ageInDogYears = calDogYears; // set age in dog years to reults of calucaltion
-
- 
-// Creates a string with the results
-var result = "Sparky is " + ageInHumanYears + " in human years old which makes him " + ageInDogYears + " in dog years";
-
-console.log(result); // Print the Results
-// end 
-
-//Pizza at the party task 
-var peopleAtTheParty = 8; // Number of people at party
-var pizzaOrdered = 4; // Number of pizzas ordered 
-var numberOfSlices = 6; // Number of slices each person gets
-
-var division = pizzaOrdered * numberOfSlices / peopleAtTheParty; // Calulate the number of pieces each person eats
-
-var pieces = division; // store that result in a variable
-
-var result = "Each person ate " + pieces + " of pizza at the party."; // create a string with the results stored in variable
-
-console.log(result);// Print the Results
-//end
-
-//Pizza for the dog
-
-//I don't understand what's being asked here 
-
-//end
-
-//Groceries task 
-var weeksGroceries = []; // Creats an empty array
-
-weeksGroceries[0] = 23; // Set 1st array item to 23
-weeksGroceries[1] = 41; // Set 2nd array item to 41
-weeksGroceries[2] = 5; // Set 3rd array item to 5
-weeksGroceries[3] = 25; // Set 4th array item to 25
-weeksGroceries[4] = 10;// Set 5th array item to 10
 
 
-//Cycle through and add all of the array itmes 
-var sum = weeksGroceries.reduce(function(prev, cur){
-	return prev + cur; // return the value
-});
 
-var average = sum / weeksGroceries.length; // finds the average from the total
+//Welecome alert
+alert("Lets Calulate how to pay off those student loans!");
 
-//store those results in a string
-var result = "You have spent a total of $" + sum + " on groceries over 5 weeks. That is an average of $" + Math.round(100*average)/100 + " per week";
-console.log(result);// Print the Results
+//Get input for how much the student owes
+var amountOwed = parseInt(prompt("How much do you currently owe?"));
 
-//End
+//Get input from the user one how long they want to pay
+var howLong = parseInt(prompt("How many years before your would like your loans to be repaid?"));
+
+//Get input from user 
+var howMuch = parseInt(prompt("how much do you expect to to pay each month?"));
 
 
-//Find the discount task
+var inputs = [];
 
-var originalPrice = 105; // set original price
+inputs[0] = amountOwed;
+inputs[1] = howLong;
+inputs[2] = howMuch;
+inputs[3] = 12;
 
-var discountPercentage = 20 / 100; // get discount rate in decimal form
+// how much they currently owe / (12 months * expected monthly payments )= total years 
+var actualAmount = amountOwed / (12 * inputs[2]);
 
-var discount = originalPrice * discountPercentage; // multiply to find the discounted amount
+var prefPayments = inputs[0] / ( inputs[3] * inputs[1] );
 
-var newPriceBeforeTax = originalPrice - discount; // subtract that discount from the original price
+var onTrackPayments = inputs[0] / ((inputs[1]*inputs[3])*inputs[2])
 
-var tax = 7 / 100; // find the tax percentage
+if( inputs[1] != actualAmount) {
 
-var taxedPrice = newPriceBeforeTax * tax + newPriceBeforeTax; // add the tax
+	console.log("Uh Oh! You wont be able to repay you loans in that amount of time with such low monthly Payments");
+	console.log("To repay $" + inputs[0] + " in " + inputs[1] + " years you will need to make monthly payments of $" + prefPayments);
 
-//Store the results in a string 
-var result = "Your total was originally $" + originalPrice + ", but after a " + discountPercentage * 100 + "% discount, it is now $" + newPriceBeforeTax + " without tax, and $" + taxedPrice + " with tax.";
+}else{
 
-console.log(result);// Print the Results
+	console.log("Great! You're Right one track!");
+	console.log("You can repay $" + inputs[0] + " in " + onTrackPayments + " years making monthly payments of $" + inputs[2]);
+}
+
+console.log(actualAmount)
+
+
+
+
 
 
 
