@@ -15,7 +15,7 @@ animals[2] = 24; // number of cows
 //Welcome Alert
 alert("Welcome to the animal party!");
 // Alert expaling what is going on here
-alert("We have" + animals[0] + " sheep, " +animals[1]+ " goats, and " + animals[2] + " cows at the party");
+alert("We have" + animals[0] + " sheep, " +animals[1]+ " goats, and " + animals[2] + " cows at the party ");
 
 // Prompt the user to send cows home
 var sendHomeCows = parseInt(prompt(" Uh oh! the cows are chewing on the sofa! \n you decide it's time for some of the cows to go home! \n how many cows would you like to send home?"));
@@ -29,6 +29,7 @@ var sendHomeCows = parseInt(prompt(" Uh oh! the cows are chewing on the sofa! \n
 
 //Subtract the input from the total number of cows
 var cowsLeft = animals[2] - sendHomeCows;
+
 
 //Log this in the console
 console.log(cowsLeft + " Cow(s) still at the Party");
@@ -44,6 +45,7 @@ var sendHomeGoats = parseInt(prompt(" Uh oh! Now the goats are jumping on the be
 
 //Subtract the input from the total number of goats
 var goatsLeft = animals[1] - sendHomeGoats;
+
 
 //Log this in the console
 console.log(goatsLeft + " Goat(s)  still at the Party");
@@ -79,11 +81,13 @@ console.log(" Actual Amount Left: " + totalAnimalsLeft);
 
 if(totalAnimals != totalAnimalsLeft){
 
+
 	console.log("Oh No! You guessed incorrectly!"); // if not tell them
 
 	console.log("The total number of animals left at the party is : " + totalAnimalsLeft); // and tell them the real total
 
 }else{
+
 
 
 	console.log("Great Job! You guessed correctly!"); // if they did guess right let them know

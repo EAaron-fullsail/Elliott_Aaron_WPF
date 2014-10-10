@@ -5,9 +5,9 @@
 	9-9-2014
 */
 
-var doc = document;
-var message = doc.createElement("li");
-var target = doc.getElementById("DOM_Target");
+var doc = document; // Set doc = document
+var message = doc.createElement("li"); // create an element for the message
+var target = doc.getElementById("DOM_Target"); // grab the <p> tag labeled DOM_Target
 
 
 // Arry that holds values for mhz and ghz information for hz
@@ -30,7 +30,7 @@ var byteUnits = 8; // Unit used to calculate speed for bytes
 var mByteUnits = 8000000; // Unit used to Calculate speed for mBytes
 var gByteUnites = 1000000000; // Unit used to calculate speed for gBytes
 //Welecome alert
-alert("Lets Calulate how many bits your processor can transfer in a minute!");
+alert("Lets Calculate how many bits your processor can transfer per second!");
 
 //Ask user for information about their processor
 var bitPrompt = parseInt(prompt("Is your processor 64bits or 32bits? \n Only type 64 or 32"));
