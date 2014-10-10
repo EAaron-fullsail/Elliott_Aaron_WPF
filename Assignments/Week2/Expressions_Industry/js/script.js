@@ -60,7 +60,7 @@ if( bitPrompt == processors[0] || bitPrompt == processors[1]){
 		var totalGBytes =  parseInt(totatBits) / gByteUnites ; // calculte the total gBytes per second 
 
 		//Print the totals to the user 
-		var newMessage = "Your Computer can process " + totatBits +  " bits per second, " + totalBytes  +  "bytes per second," + totalMBytes + "Megabytes per second, and"   + totalGBytes + "total Gigabytes per second.";
+		var newMessage = "Your Computer can process " + totatBits +  " bits per second, " + totalBytes  +  "bytes per second," + totalMBytes + "Megabytes per second, and "   + totalGBytes + " Gigabytes per second.";
 	 	
 	 	console.log(newMessage);
 
