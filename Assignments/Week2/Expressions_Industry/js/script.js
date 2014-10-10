@@ -24,6 +24,9 @@ var processors = [];
 processors[0] = 64;
 processors[1] = 32;
 
+var byteUnits = 8;
+var mByteUnits = 8000000;
+var gByteUnites = 1000000000;
 //Welecome alert
 alert("Lets Calulate how many bits your processor can transfer in a minute!");
 
@@ -42,11 +45,11 @@ if( bitPrompt == processors[0] || bitPrompt == processors[1]){
 
 		var totatBits = bitPrompt * (howMany * speeds[1]);
 
-		var totalBytes = parseInt(totatBits) / 8;
+		var totalBytes = parseInt(totatBits) / byteUnits;
 
-		var totalMBytes = parseInt(totatBits) / 8000000 ;
+		var totalMBytes = parseInt(totatBits) / mByteUnits ;
 
-		var totalGBytes =  parseInt(totatBits) / 1000000000 ;
+		var totalGBytes =  parseInt(totatBits) / gByteUnites ;
 
 		var newMessage = "Your Computer can process " + totatBits +  " bits per second, " + totalBytes  +  "bytes per second," + totalMBytes + "Megabytes per second, and"   + totalGBytes + "total Gigabytes per second.";
 	 
@@ -65,11 +68,11 @@ if( bitPrompt == processors[0] || bitPrompt == processors[1]){
 
 		var totatBits = bitPrompt * (howMany * speeds[1]);
 
-		var totalBytes = parseInt(totatBits) / 8;
+		var totalBytes = parseInt(totatBits) / byteUnits;
 
-		var totalMBytes = parseInt(totatBits) / 8000000 ;
+		var totalMBytes = parseInt(totatBits) / mByteUnits;
 
-		var totalGBytes =  parseInt(totatBits) / 1000000000 ;
+		var totalGBytes =  parseInt(totatBits) / gByteUnites;
 
 		var newMessage = "Your Computer can process " + totatBits +  " bits per second, " + totalBytes  +  "bytes per second," + totalMBytes + "Megabytes per second, and"   + totalGBytes + "total Gigabytes per second.";
 	 
