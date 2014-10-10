@@ -2,7 +2,7 @@
 	Aaron Elliott
 	WPF 1409 Section 02
 	Expression Personal
-	9-8-2014
+	9-9-2014
 */
 
 
@@ -27,7 +27,7 @@ inputs[2] = howMuch;
 inputs[3] = 12;
 
 // Calculate how much they currently owe / (12 months * expected monthly payments )= total years 
-var actualAmount = amountOwed / (12 * inputs[2]);
+var actualAmount = amountOwed / (12 * inputs[1]);
 
 // Calculate payments if they do not make their goal
 var prefPayments = inputs[0] / ( inputs[3] * inputs[1] );
