@@ -5,6 +5,94 @@
 	9-8-2014
 */
 
+
+
+
+
+//Get user input
+
+
+
+
+var doc = document;
+var message = doc.createElement("li");
+var target = doc.getElementById("DOM_Target");
+
+var speeds = [];
+speeds[0] = 1000000;
+speeds[1] = 1000000000;
+
+
+var hz = [];
+
+hz[0] = "mhz";
+hz[1] = "ghz";
+
+var yourProcessor;
+var yourClockSpeed;
+
+
+alert("Lets Calulate how many bits your processor can transfer in a minute!");
+var bitprompt = parseInt(prompt("Is your processor 64bits or 32bits?"));
+
+var hrzmessage = prompt("Is the Clock speed in Ghz or Mhz?\nType Ghz or Mhz");
+if(hrzmessage == hz[0]){
+
+	var howmany = parseInt(prompt("How many " + hrzmessage + " is it? \n Just type the number please."));
+		
+	var totatBits = bitprompt * (howmany * speeds[0]);
+
+	var outPut = doc.createTextNode(totatBits);
+	
+	message.appendChild(outPut);
+
+	target.appendChild(message);
+
+	console.log(totatBits);
+
+}else if(hrzmessage == hz[1]){
+
+	var howmany = parseInt(prompt("How many " + hrzmessage + " is it? \n Just type the number please."));
+
+	var totatBits = "You're Computer can process " + bitprompt * (howmany * speeds[1]) + " per second";
+
+	var outPut = doc.createTextNode(totatBits);
+	message.appendChild(outPut);
+
+	target.appendChild(message);
+}else{
+
+	//Print Error Message 
+	
+}
+
+
+
+
+
+
+
+
+
+
+//Prompt
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //Dog Years task
 var ageInHumanYears = 3; // set human years = 3
 
