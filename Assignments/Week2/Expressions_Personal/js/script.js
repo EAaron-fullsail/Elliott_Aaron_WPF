@@ -6,8 +6,6 @@
 */
 
 
-
-
 //Welecome alert
 alert("Lets Calulate how to pay off those student loans!");
 
