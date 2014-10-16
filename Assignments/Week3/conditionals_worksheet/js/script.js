@@ -29,7 +29,7 @@ givensF[5] = "farhrenheit";
 
 
 
-//var input = prompt("Enter in the temp in Far or Celsius");//get user input
+var input = prompt("Enter in the temp in Far or Celsius");//get user input
 
 var result = input; // load input in varaiable
 
