@@ -1,0 +1,194 @@
+<!DOCTYPE HTML>
+<meta charset="UTF-8">
+<html>
+	<head lang="en">
+		<title>Industry Conditionals</title>
+	</head>
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+	<link rel="stylesheet" src="//normalize-css.googlecode.com/svn/trunk/normalize.css" />
+	<body>
+
+		<div class="container">
+
+			<div class="container">
+
+				<div class="row">
+
+					<div class="colun twelve" >
+
+						<h1 id="quizTitle">
+							
+							Industry Conditional Example
+
+						</h1>
+
+					</div>
+					<div class="column twelve">
+
+						<h1 id="question">
+							A ____________ is an object that stores a value in js
+						</h1>
+						<!-- Tag for question -->
+
+						<li id="questionNumber">
+
+							Question 1 / 3
+						</li>
+						<!-- tag for question # -->
+
+					</div>
+
+				</div>
+
+				<div class="row">
+
+					<div class="column eight">
+
+						<ul id="possibleAnswers">
+
+							<li>
+
+								<p id="lead">1</p>
+								<p>Answer</p>
+
+							</li>
+							<li>
+
+								<p id="lead">1</p>
+								<p>Answer</p>
+							</li>
+							<li>
+
+								<p id="lead">1</p>
+								<p>Answer</p>
+							</li>
+							<li>
+
+								<p id="lead">1</p>
+								<p>Answer</p>
+
+							</li>
+				
+
+						</ul>
+
+
+
+					</div>
+					<!-- tag for possible answers -->
+
+					<div class="column four">
+
+						<table>
+
+							<tr>
+								<td>Correct Answers : </td>
+								<td> 0 </td>
+
+							</tr>
+
+
+							<tr>
+								<td>Wrong Answers : </td>
+								<td> 0 </td>
+
+							</tr>
+
+
+						</table>
+
+
+					</div>
+					<!-- tag for correct and wrong answers-->
+				</div>
+
+			</div>
+
+
+
+		</div>
+	</body>
+
+	<script type="text/javascript">
+
+
+		var questions = [];
+
+		questions[0] = {"Q": "What would a for loop if it's conditions were (i=0; i<5; i++)?", "a1": "nothing at all", "a2": "run 5 times before stopping", "a3": "there is no such thing as a for loop in javascript", "a4": "pancakes", "ca": "a2"};
+
+		questions[1] = {"Q": "A ___________ is used to store a value?", "a1": "variable", "a2": "bucket", "a3": "whats a value?", "a4": "a loop", "ca": "a1"};
+
+		questions[2] = {"Q": "Why would you want to use git?", "a1": "organization", "a2": "you don't want to be known as a 'cowboy coder' ", "a3": "you never loose the code you've written", "a4": "all of the above", "ca": "a4"};
+
+		console.log(questions[0]);
+		console.log(questions[1]);
+		console.log(questions[2]);
+
+
+		var doc = document;
+		var answerList = doc.getElementById("possibleAnswers");
+
+		var newAnswer = doc.createElement('li');
+
+	
+
+
+		console.log(questions[0].a1);
+
+		function loadQuestion (i){
+		var i=0;
+			//
+		var newQuestion = doc.createTextNode(questions[i].Q); 
+		var newAddAnswerOne = doc.createTextNode(questions[i].a1); 
+		var newAddAnswerTwo = doc.createTextNode(questions[i].a2); 
+		var newAddAnswerThree = doc.createTextNode(questions[i].a3); 
+		var newAddAnswerFour = doc.createTextNode(questions[i].a4); 
+
+		newAnswer.appendChild(newAddAnswerOne);
+		answerList.insertBefore(newAnswer, answerList.firstChild);
+
+		}
+	loadQuestion();
+
+	(function(){
+
+	
+
+
+		//load quiz varaible 
+
+
+		//insert first question into specified tag
+
+		//generate the possible answers
+
+		//append those answers to the specified tag
+
+		//if user clicks an answer
+
+		//check to see if the user clicked the right answers
+
+		//if they did add one point to the correct answers
+
+		//if they didn't add one point the incorrect answers
+
+		//load the next question
+
+		//if the total number of questions has been reached
+
+		//check to see if the total correct answers is greater than the total amount of questions
+
+		//if yes print - " Great job "
+
+		//if not print - " Sorry Try again? " 
+
+
+
+
+
+	});
+
+
+
+	</script>
+</html>
