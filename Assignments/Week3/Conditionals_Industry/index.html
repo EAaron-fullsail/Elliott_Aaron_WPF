@@ -23,16 +23,14 @@
 						</h1>
 
 					</div>
-					<div class="column twelve">
+					<div class="column twelve" id="questionDiv">
 
 						<h1 id="question">
-							A ____________ is an object that stores a value in js
+							
 						</h1>
 						<!-- Tag for question -->
 
 						<li id="questionNumber">
-
-							Question 1 / 3
 						</li>
 						<!-- tag for question # -->
 
@@ -45,30 +43,6 @@
 					<div class="column eight">
 
 						<ul id="possibleAnswers">
-
-							<li>
-
-								<p id="lead">1</p>
-								<p>Answer</p>
-
-							</li>
-							<li>
-
-								<p id="lead">1</p>
-								<p>Answer</p>
-							</li>
-							<li>
-
-								<p id="lead">1</p>
-								<p>Answer</p>
-							</li>
-							<li>
-
-								<p id="lead">1</p>
-								<p>Answer</p>
-
-							</li>
-				
 
 						</ul>
 
@@ -111,48 +85,148 @@
 
 	<script type="text/javascript">
 
+		var doc = document;
+
+
+	
+
+
 
 		var questions = [];
+		questions[0] ={"Q": "What would a for loop if it's conditions were (i=0; i<5; i++)?", "a1": "nothing at all", "a2": "run 5 times before stopping", "a3": "there is no such thing as a for loop in javascript", "a4": "pancakes", "ca": "run 5 times before stopping","n": "1"};
 
-		questions[0] = {"Q": "What would a for loop if it's conditions were (i=0; i<5; i++)?", "a1": "nothing at all", "a2": "run 5 times before stopping", "a3": "there is no such thing as a for loop in javascript", "a4": "pancakes", "ca": "a2"};
+		questions[1] = {"Q": "A ___________ is used to store a value?", "a1": "variable", "a2": "bucket", "a3": "whats a value?", "a4": "a loop", "ca": "variable","n": "2"};
 
-		questions[1] = {"Q": "A ___________ is used to store a value?", "a1": "variable", "a2": "bucket", "a3": "whats a value?", "a4": "a loop", "ca": "a1"};
-
-		questions[2] = {"Q": "Why would you want to use git?", "a1": "organization", "a2": "you don't want to be known as a 'cowboy coder' ", "a3": "you never loose the code you've written", "a4": "all of the above", "ca": "a4"};
-
-		console.log(questions[0]);
-		console.log(questions[1]);
-		console.log(questions[2]);
+		questions[2]= {"Q": "Why would you want to use git?", "a1": "organization", "a2": "you don't want to be known as a 'cowboy coder' ", "a3": "you never loose the code you've written", "a4": "all of the above", "ca": "all of the above","n": "3"};
 
 
-		var doc = document;
-		var answerList = doc.getElementById("possibleAnswers");
-
-		var newAnswer = doc.createElement('li');
+		var q = 2;
+		var answerList = doc.getElementsByTagName('ul')[0];
+		
+		var possibleAnswers  =  Object.keys(questions[q]).length - 4;
+		console.log(possibleAnswers);
+	
+	function getQuestion(){
+		
+			a = [];
+			a[0] = questions[q].a1;
+			a[1] = questions[q].a2;
+			a[2] = questions[q].a3;
+			a[3] = questions[q].a4;
 
 	
 
+			n = questions[q].n;
 
-		console.log(questions[0].a1);
+			var qNum = doc.getElementById("questionNumber");
+			qNum.innerHTML = "Question" + n + " / 3"; 
 
-		function loadQuestion (i){
-		var i=0;
-			//
-		var newQuestion = doc.createTextNode(questions[i].Q); 
-		var newAddAnswerOne = doc.createTextNode(questions[i].a1); 
-		var newAddAnswerTwo = doc.createTextNode(questions[i].a2); 
-		var newAddAnswerThree = doc.createTextNode(questions[i].a3); 
-		var newAddAnswerFour = doc.createTextNode(questions[i].a4); 
 
-		newAnswer.appendChild(newAddAnswerOne);
-		answerList.insertBefore(newAnswer, answerList.firstChild);
 
+			console.log(a[2])
+
+			for (i = 0; i<=possibleAnswers; i++){
+                var newAnswer = doc.createElement("li");
+                newAnswer.id = "button";
+                
+
+                var answer = doc.createTextNode(a[i]);
+				newAnswer.appendChild(answer);
+				answerList.insertBefore(newAnswer, answerList.firstChild);
+
+
+			}
+
+			var questionDiv = doc.getElementById("questionDiv");
+			var question = doc.createElement("h1");
+			var questionTitle = doc.createTextNode(questions[q].Q);
+
+			question.appendChild(questionTitle);
+			questionDiv.insertBefore(question, questionDiv.FirstChild);
+		
+			console.log(questionTitle);
 		}
-	loadQuestion();
 
-	(function(){
+
+getQuestion(q);
+ newAnswer.onClick = checkAnswer();
+function checkAnswer(){
+		
+			console.log("Hello");
+			/*
+
+			var ua;
+			this.innerHTML = ua;
+
+		ca = questions[q].ca;
+
+		if (ca === ua){
+			console.log("WOOOT");
+
+
+		}else{
+			console.log("nope")
+		}
+
+
+*/
+
+		
+
+}
 
 	
+
+
+/*
+
+		var questionDiv = doc.getElementById("questionDiv");
+		var question = doc.createElement("h1");
+		var questionTitle = doc.createTextNode(questions[q].Q);
+
+		question.appendChild(questionTitle);
+		questionDiv.insertBefore(question, questionDiv.FirstChild);
+		
+		console.log(questionTitle);
+		
+		
+		
+		var possibleAnswers  =  Object.keys(questions[q]).length - 2;
+
+	
+
+		console.log(possibleAnswers);
+		console.log(questions[q].a1);
+		console.log(questions[q].a2);
+		console.log(questions[q].a3);
+		console.log(questions[q].a4);
+
+
+
+
+
+*/
+	
+		// print the question
+
+
+		//print each possible answer for this question
+
+		// add id to each possible answer
+
+
+		/*
+				<li>
+
+				<p id="lead">1</p>
+				<p>Answer</p>
+
+			</li>
+
+		*/
+
+	
+
 
 
 		//load quiz varaible 
@@ -184,9 +258,6 @@
 
 
 
-
-
-	});
 
 
 

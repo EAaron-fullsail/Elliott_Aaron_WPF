@@ -111,11 +111,12 @@
   	height: 120px;
   	border-radius:10px;
   	overflow:hidden;
+  	cursor: pointer;
 
  
  }
 
-  #possibleAnswers p[id="lead"]{
+  #possibleAnswers .lead{
   	width: 25%;
   	max-width: 25%;
   	padding-top: 60px;
