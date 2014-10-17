@@ -1,3 +1,14 @@
+/*
+<!--
+	Aaron Elliott
+	WPF 1409 Section 02
+	Conditional Wacky 
+	10-16-2014
+-->
+
+*/
+
+
 var likesCheese = false; // set variable to false
 
 var likesMeat = false;// set variable to false
