@@ -2,24 +2,25 @@
 
 
 
-var first = prompt("Doy you like Paintball?\n type yes or no only please");
+var first = prompt("Doy you like Paintball?\n type yes or no only please"); // get the first input 
 
-first = first.substr(0, first.length);
+first = first.substr(0, first.length); // get the string 
+
+ 
+if (first == "no"){ // if the user says no 
+
+	console.log("Sorry this isn't for you"); // print this message 
 
 
-if (first == "no"){
+}else if(first == "yes"){ // if they say yes 
 
-	console.log("Sorry this isn't for you");
-
-
-}else if(first == "yes"){
-	console.log("Great! Me too");
+	console.log("Great! Me too"); // print this message 
 	
-	var simi = 1;
+	var simi = 1; // set simi = 1 
 	
-	var ramping = 15;
+	var ramping = 15; // set ramping = 15
 	
-	console.log("Let's see how fast you shoot!");
+	console.log("Let's see how fast you shoot!"); // let the user know what's going on
 	
 	console.log("alternate tapping your index and middle finger as many times as you can for 15seconds");
 	
