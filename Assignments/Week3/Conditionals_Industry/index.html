@@ -21,6 +21,8 @@
 							Industry Conditional Example
 
 						</h1>
+							<li id="questionNumber">
+						</li>
 
 					</div>
 					<div class="column twelve" id="questionDiv">
@@ -30,8 +32,7 @@
 						</h1>
 						<!-- Tag for question -->
 
-						<li id="questionNumber">
-						</li>
+					
 						<!-- tag for question # -->
 
 					</div>
@@ -88,10 +89,6 @@
 		var doc = document;
 
 
-	
-
-
-
 		var questions = [];
 		questions[0] ={"Q": "What would a for loop if it's conditions were (i=0; i<5; i++)?", "a1": "nothing at all", "a2": "run 5 times before stopping", "a3": "there is no such thing as a for loop in javascript", "a4": "pancakes", "ca": "run 5 times before stopping","n": "1"};
 
@@ -100,14 +97,17 @@
 		questions[2]= {"Q": "Why would you want to use git?", "a1": "organization", "a2": "you don't want to be known as a 'cowboy coder' ", "a3": "you never loose the code you've written", "a4": "all of the above", "ca": "all of the above","n": "3"};
 
 
-		var q = 2;
+		var q = 0;
 		var answerList = doc.getElementsByTagName('ul')[0];
+
+		var correctAnswers = 0;
+		var wrongAnswers = 0;
 		
 		var possibleAnswers  =  Object.keys(questions[q]).length - 4;
 		console.log(possibleAnswers);
 	
 	function getQuestion(){
-		
+
 			a = [];
 			a[0] = questions[q].a1;
 			a[1] = questions[q].a2;
@@ -119,63 +119,100 @@
 			n = questions[q].n;
 
 			var qNum = doc.getElementById("questionNumber");
-			qNum.innerHTML = "Question" + n + " / 3"; 
+			qNum.innerHTML = "Question " + n + " / 3"; 
 
 
 
 			console.log(a[2])
 
+
+			var questionDiv = doc.getElementById("questionDiv");
+			var question = doc.createElement("h2");
+	
+			var questionTitle = doc.createTextNode(questions[q].Q);
+			
+			question.appendChild(questionTitle);
+			questionDiv.insertBefore(question, questionDiv.FirstChild);
+			question.id = "question";
+			console.log(questionTitle);
+
 			for (i = 0; i<=possibleAnswers; i++){
+				
                 var newAnswer = doc.createElement("li");
-                newAnswer.id = "button";
-                
+                newAnswer.id = "answer"+i;
+                console.log(newAnswer)
+                newAnswer.addEventListener('click', checkAnswer, false);
 
                 var answer = doc.createTextNode(a[i]);
 				newAnswer.appendChild(answer);
 				answerList.insertBefore(newAnswer, answerList.firstChild);
 
 
+
 			}
 
-			var questionDiv = doc.getElementById("questionDiv");
-			var question = doc.createElement("h1");
-			var questionTitle = doc.createTextNode(questions[q].Q);
 
-			question.appendChild(questionTitle);
-			questionDiv.insertBefore(question, questionDiv.FirstChild);
-		
-			console.log(questionTitle);
+
 		}
 
+
+
+	getQuestion(q);
+function checkAnswer(id){
+id = this.id;
+
+
+var at = doc.getElementById(""+id+"").innerHTML;
+
+
+console.log(at);
+
+var ca = questions[q].ca;
+
+//console.log(ca);
+
+if(at == ca){
+
+console.log("Right Answer");
+
+correctAnswers++;
+
+console.log(correctAnswers);
+
+var newQuestion = doc.getElementById('question');
+
+newQuestion.innerHTML = "";
+
+var list = doc.getElementsByTagName('ul')[0];
+
+list.innerHTML = "";
+
+q++;
 
 getQuestion(q);
- newAnswer.onClick = checkAnswer();
-function checkAnswer(){
-		
-			console.log("Hello");
-			/*
 
-			var ua;
-			this.innerHTML = ua;
+}else{
+console.log("Wrong Answer");
+correctAnswers++;
+console.log(wrongAnswers);
 
-		ca = questions[q].ca;
+var newQuestion = doc.getElementById('question');
 
-		if (ca === ua){
-			console.log("WOOOT");
-
-
-		}else{
-			console.log("nope")
-		}
-
-
-*/
-
-		
+newQuestion.innerHTML = "";
+var list = doc.getElementsByTagName('ul')[0];
+list.innerHTML = "";
+q++;
+getQuestion(q);
+}
 
 }
 
-	
+
+
+
+
+
+
 
 
 /*
