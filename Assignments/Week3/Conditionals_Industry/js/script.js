@@ -1,4 +1,13 @@
-// answer
+/*
+<!--
+	Aaron Elliott
+	WPF 1409 Section 02
+	Conditional  indusrty
+	10-16-2014
+-->
+
+
+*/
 		var doc = document;
 
 		var questions = []; // questions array
