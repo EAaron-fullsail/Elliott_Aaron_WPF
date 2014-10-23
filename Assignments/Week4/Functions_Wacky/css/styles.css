@@ -4,8 +4,6 @@
 
 
 */ 
-
-
  /*ZURB - Foundation css grid builder standard 960/940 grid,
  	Obtained at 
 	url - http://zurb.com/playground/css-grid-builder
@@ -13,7 +11,7 @@
     /* --------------------------------------------------
     Container
     -------------------------------------------------- */
-    div#container, div.container { position: relative; width: 940px; margin: 0 auto; padding: 0; }
+    div#container, div.container { position: relative; width: 940px; margin: 0 auto; padding: 30px 0px; }
      
      
     /* --------------------------------------------------
@@ -67,68 +65,40 @@
     background-color: #ffffff;
  }
 
-#quizTitle{
-	text-align: center;
+ #title{
+  margin: 0px 0px 0px 0px;
+  display: inline;
+  padding: 50px 0px;
+  font-size: 3em;
+  color:#ffffff;
+ }
+
+.wrapper{
+  width: 100%;
+  height: 100%;
+  background-color: #0099ff;
+  text-align: center;
 }
-
-
- #possibleAnswers{
- 	width: 100%;
- 	height: auto;
- 	padding: 0;
- 	margin: 0;
- 	position: relative;
- 	top:0;
- 	left: 0;
+ #mouse{
+  width: 90%;
+  min-height: 500px;
+  background-image:url(../images/mouse.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 
  }
 
- #questionNumber{
- 	width: 100px;
- 	padding: 10px;
- 	background-color: #bfbfbf;
- 	position: absolute;
- 	top:0;
- 	right:0;
- 	list-style: none; 
- 	text-align: center;
+ .text_bubble{
+  width:600px;
+  min-height: 330px;
+  margin-left: -130px;
+  background-image:url(../images/bubble.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: fixed;
  }
-
-#question{
-	text-align: center;
-	margin-top: 60px;
-}
-
-
-  #possibleAnswers li{
-
-  	list-style: none;
-  	background-color: #fbfbfb;
-  	border: solid thin #bfbfbf;
-  	margin: 0px 0px 10px 0px;
-  	position: relative;
-  	min-height: 100%;
-  	padding-top: 60px;
-  	padding-bottom: 60px;
-  	border-radius:10px;
-  	overflow:hidden;
-  	cursor: pointer;
-  	text-align: center;
-
-
- 
- }
-
-  #possibleAnswers .lead{
-  	width: 25%;
-  	max-width: 25%;
-  	padding-top: 60px;
-  	height: 60px;
-  	float: left;
-  	position: relative;
-  	margin: 0;
-  	background-color: #bfbfbf;
-  	text-align: center;
-  
- 
+ #answers{
+  position: relative;
  }
