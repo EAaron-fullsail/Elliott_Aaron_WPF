@@ -9,14 +9,17 @@ animals[2] = {"n": "Duck", "weight": "10lbs"};
 
 
 function deathByStings(){
-	for(i=0; i<animals.length; i++){
+
 		var death = parseInt(animals[i].weight) * spp;
 		death = Math.round(100*death) / 100;
-
-		console.log("It would take " + death + " bee stings to kill a " +animals[i].weight+ " "+ animals[i].n);
-	}
+		var result = "It would take " + death + " bee stings to kill a " +animals[i].weight+ " "+ animals[i].n;
+		return result;	
 }
 
 
+for(i=0; i<animals.length; i++){
+	var re = deathByStings(animals[i]);
+	console.log(re);
+}
 
-deathByStings();
+
