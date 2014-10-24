@@ -7,20 +7,33 @@
 
 		function calcHours(h, m, p){	//a function with three params
 
-			m > h ? console.log( "Getting enough sleep")  : console.log( "Not getting enough sleep")  ;
-			if(mhos < hos){	//one logical operator
-				var calc = h - m;
+			m > h ? console.log( "Getting enough sleep")  : console.log( "Not getting enough sleep")  ; //turnary to check if getting enough
+			if(mhos < hos){	//one logical operator to start the process
+				
+				var calc = h - m; // subtract average from needed hours 
+
 				var perc = Math.round(calc / m * 10) * 10; //Expression with two arithmetic operators
-				console.log("You need to be getting " + calc + " more hours of sleep a week" );
-				console.log("You are averaging " + perc + "% of the needed hours of sleep weekly");
-				console.log("Try shooting for " + p + " hours of sleep weekly");
+				
+				console.log("You need to be getting " + calc + " more hours of sleep a week" ); // Log the first calc
+				
+				console.log("You are averaging " + perc + "% of the needed hours of sleep weekly"); // log the percentage
+				
+				console.log("Try shooting for " + p + " hours of sleep weekly"); // log phos variable
 			} else if(mhos > hos){// else if
-				console.log("Doing just fine!");
+
+				console.log("Doing just fine!"); // the person is getting enough sleep
+		
 			}
-			return hos, mhos, phos;
+		
+			return hos, mhos, phos; // return the values
 		}
 
+		//log the return values
+		
 		console.log("hours of sleep you need : " + hos + "\n" + "hours of sleep you're getting : " + mhos + "\n" + "min hours you should be getting a week : " + phos + "\n");
+		
+		//call the function
 		calcHours(hos,mhos,phos);
+
 
 	})();
