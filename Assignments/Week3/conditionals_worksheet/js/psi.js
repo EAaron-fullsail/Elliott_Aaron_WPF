@@ -5,9 +5,15 @@ tirePSI[0] = 32;
 
 tirePSI[1] = 32;
 
+<<<<<<< HEAD
+tirePSI[2] = 31;
+
+tirePSI[3] = 32;
+=======
 tirePSI[2] = 32;
 
 tirePSI[3] = 35;
+>>>>>>> e5ef569f1d6c01d4245cbd01e28c596e85d014fd
 
 // 
 tirePSI[0] = {"N": "Back Left ", "Psi": tirePSI[0]}; // array item as object 
