@@ -1,3 +1,14 @@
+/*
+<!--
+	Aaron Elliott
+	WPF 1409 Section 02
+	Functions Personal 
+	10-23-2014
+-->
+*/
+
+
+
 	(function(){ // anon function
 
 		var hos = 56, // hours of sleep I should get a week

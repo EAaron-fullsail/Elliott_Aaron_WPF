@@ -1,3 +1,12 @@
+/*
+<!--
+	Aaron Elliott
+	WPF 1409 Section 02
+	Functions Wacky 
+	10-23-2014
+-->
+*/
+
 	(function(){ // anon function
 
 		var weasels = []; //array for the weasels
